@@ -4,6 +4,7 @@
 
 #include <windows.h> //Header file containing definitions of functions, data types, and WinAPI macros
 #include <gdiplus.h> // GDIPlus header file
+#include <iostream>
 
 using namespace Gdiplus;	//We use GDI name space
 
@@ -103,6 +104,8 @@ void DrawPixel(HDC hdc, int x, int y, int blackness)
 	Graphics graphics(hdc);
 	SolidBrush solidBrush(Color(blackness, 0, 0, 0));
 	graphics.FillRectangle(&solidBrush, x, y, 19, 19);
+
+	std::cout << "hello";
 }
 
 void draw_pink_floyed(HDC hdc)
